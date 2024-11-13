@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
+import createWithMakeswift from '@makeswift/runtime/next/plugin';
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const withMakeswift = createWithMakeswift();
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // your existing next config
 };
 
-export default nextConfig;
+export default withMakeswift(nextConfig);
